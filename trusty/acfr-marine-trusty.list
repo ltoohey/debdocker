@@ -1,2 +1,4 @@
 deb [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror trusty main
 deb [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror trusty-experimental main
+deb-src [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror trusty main
+deb-src [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror trusty-experimental main
