@@ -11,7 +11,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     devscripts \
     equivs \
     git \
+    openssh-client \
     && rm -rf /var/lib/apt/lists/*
+
+# for later usage add in contrib and non-free
+RUN sed -i "s/jessie main/jessie main contrib non-free/" /etc/apt/sources.list
 
 # these are needing when using the image, not right now
 COPY acfrmarine-archive-keyring.gpg /etc/apt/trusted.gpg.d/

@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     devscripts \
     git \
+    openssh-client \
     && rm -rf /var/lib/apt/lists/*
 
 # these are needing when using the image, not right now
