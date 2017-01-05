@@ -18,3 +18,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # these are needing when using the image, not right now
 COPY acfrmarine-archive-keyring.gpg /etc/apt/trusted.gpg.d/
 COPY acfr-marine-trusty.list /etc/apt/sources.list.d/
+
+RUN sed -i "s/archive.ubuntu.com/mirror.aarnet.edu.au/" /etc/apt/sources.list
