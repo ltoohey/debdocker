@@ -1,4 +1,4 @@
-FROM ubuntu:beaver
+FROM ubuntu:bionic
 
 MAINTAINER Lachlan Toohey <l.toohey@acfr.usyd.edu.au>
 
@@ -16,6 +16,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # these are needing when using the image, not right now
 COPY acfrmarine-archive-keyring.gpg /etc/apt/trusted.gpg.d/
-COPY acfr-marine-xenial.list /etc/apt/sources.list.d/
+COPY acfr-marine-bionic.list /etc/apt/sources.list.d/
 
 RUN sed -i "s/archive.ubuntu.com/mirror.aarnet.edu.au/" /etc/apt/sources.list
