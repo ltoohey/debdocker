@@ -1,0 +1,4 @@
+deb [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror buster main
+deb [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror buster-experimental main
+deb-src [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror buster main
+deb-src [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror buster-experimental main
