@@ -1,0 +1,2 @@
+deb [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror REPO main
+deb [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror REPO-experimental main

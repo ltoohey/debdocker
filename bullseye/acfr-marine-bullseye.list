@@ -1,4 +1,0 @@
-deb [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror bullseye main
-deb [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror bullseye-experimental main
-deb-src [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror bullseye main
-deb-src [arch=amd64] http://www-personal.acfr.usyd.edu.au/lachlan/mirror bullseye-experimental main

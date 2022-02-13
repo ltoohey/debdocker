@@ -1,4 +1,8 @@
-FROM debian:bullseye
+ARG DIST
+FROM debian:${DIST}
+
+# this needs to be repeated, the FROM wipes the environment variables
+ARG DIST
 
 MAINTAINER Lachlan Toohey <l.toohey@acfr.usyd.edu.au>
 
@@ -16,8 +20,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # for later usage add in contrib and non-free
-RUN sed -i "s/bullseye main/bullseye main contrib non-free/" /etc/apt/sources.list
+RUN ["/bin/bash", "-c", "sed -i \"s/$DIST main/$DIST main contrib non-free/\" /etc/apt/sources.list"]
 
 # these are needing when using the image, not right now
 COPY acfrmarine-archive-keyring.gpg /etc/apt/trusted.gpg.d/
-COPY acfr-marine-bullseye.list /etc/apt/sources.list.d/
+COPY acfr-marine.list /etc/apt/sources.list.d/
+
+RUN ["/bin/bash", "-c", "sed -i \"s/REPO/$DIST/\" /etc/apt/sources.list.d/acfr-marine.list"]
