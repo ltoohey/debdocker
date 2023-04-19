@@ -1,0 +1,7 @@
+deb [arch=amd64] http://mirror.aarnet.edu.au/ubuntu/ REPO main universe multiverse restricted
+deb [arch=amd64] http://mirror.aarnet.edu.au/ubuntu/ REPO-updates main universe multiverse restricted
+deb [arch=amd64] http://mirror.aarnet.edu.au/ubuntu/ REPO-security main universe multiverse restricted
+
+deb [arch=arm64] http://mirror.aarnet.edu.au/pub/ubuntu/ports/ REPO main universe multiverse restricted
+deb [arch=arm64] http://mirror.aarnet.edu.au/pub/ubuntu/ports/ REPO-updates main universe multiverse restricted
+deb [arch=arm64] http://mirror.aarnet.edu.au/pub/ubuntu/ports/ REPO-security main universe multiverse restricted

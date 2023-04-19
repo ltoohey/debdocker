@@ -8,7 +8,11 @@ MAINTAINER Lachlan Toohey <l.toohey@acfr.usyd.edu.au>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN sed -i "s/archive.ubuntu.com/mirror.aarnet.edu.au/" /etc/apt/sources.list
+# arm64 is in the ubuntu ports... which has a different base and confuses
+# dpkg when adding the foreign architecture, so just overwrite and fix in
+# the architectures of interest (arm64 and amd64)
+COPY ubuntu-cross.list /etc/apt/sources.list
+RUN ["/bin/bash", "-c", "sed -i \"s/REPO/$DIST/\" /etc/apt/sources.list"]
 
 # get the packages first
 # this is the bare minimum to get the project to run
