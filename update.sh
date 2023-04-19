@@ -19,7 +19,7 @@ done
 # jammy pending in 2022
 # trusty & xenial are probably needed to be retained for processing
 # due to opencv requirements
-for d in trusty xenial bionic focal ; do
+for d in trusty xenial bionic focal jammy; do
     DIST=$d docker build --build-arg DIST -f Dockerfile.ubuntu  -t ltoohey/debdocker:$d .
     docker push ltoohey/debdocker:$d
 done
